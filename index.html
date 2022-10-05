@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbe Irréguliers</title>
+</head>
+<body>
+    
+
+    <div id="reponse"></div>
+    <button id="test">
+            go
+    </button>
+
+    
+
+    <script   src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
+    <script type="module">
+
+/* recuperation JSON */
+
+     import * as verbesJSON from './verbes.json';
+    console.log(verbesJSON)
+        /* Declaration verbes irreguliers  */
+        let verbe ={traduction:"respecter / se conformer à",baseV:"abide",pret:"abode",pp:"abode"}
+
+
+
+        /* fonctions */
+
+
+        /* evenements */
+$("#test").click(()=>{
+    console.log("salut")
+    $("#reponse").append("coucou")
+})
+
+    </script>
+</body>
+</html>
