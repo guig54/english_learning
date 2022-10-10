@@ -8,5 +8,10 @@
     "start": "node server.js"
   },
   "author": "guig54",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
 }
