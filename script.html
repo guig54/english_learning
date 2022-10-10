@@ -1215,8 +1215,8 @@
 
 
 
-<script   src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
-
+<script  src="https://code.jquery.com/jquery-3.6.1.min.js"   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="   crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 liste =[]
 listeF=[]
@@ -1236,15 +1236,18 @@ $('tbody tr').each( (tr_idx,tr) => {
 console.log(liste) */
 taille=liste.length
  for(i=1;i<taille;i++){
-    listeF.push({
+    console.log('insertion')
+   /* const res = await axios.post('localhost:5000/init', {
         baseV :liste[i].baseV.textContent,
         pret :liste[i].pret.textContent,
         pp:liste[i].pp.textContent,
         trad:liste[i].trad.textContent
-    })
-} 
+    });*/
+    const res= await axios.get("http://localhost:5000").then(res=>console.log(res))
+}
+  
+ 
 //console.log(listeF)
-
 
 var monJson=JSON.stringify(listeF)
 console.log(monJson)
